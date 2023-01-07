@@ -14,7 +14,7 @@
 					<th>Name</th>
 					<th>IP</th>
 					<th>Country</th>
-					<th>Uptime</th>
+					<!-- <th>Uptime</th> -->
 					<th>Response Time</th>
 				</tr>
 			</thead>

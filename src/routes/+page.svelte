@@ -8,12 +8,16 @@
 		<h1>WhatsApp Proxy</h1>
 		<span class="callToAction">The only site you'll ever need to find WhatsApp Proxies</span>
 		<span>We offer a wide range of highly available proxies</span>
-		<span class="howToConnect"
-			>Not sure how to connect? <a
+		<span class="howToConnect">
+			Not sure how to connect?
+			<a
 				href="https://faq.whatsapp.com/520504143274092/?cms_platform=web&helpref=platform_switcher"
-				target="_blank">Follow this guide</a
-			></span
-		>
+				target="_blank"
+				rel="noreferrer"
+			>
+				Follow this guide
+			</a>
+		</span>
 	</div>
 	<ProxyTable />
 	<div class="footerComponent">
