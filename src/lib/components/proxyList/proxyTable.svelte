@@ -1,0 +1,84 @@
+<script lang="ts">
+	import type { ProxyType } from '$lib/typeDef/proxyType';
+	import ProxyEntry from '$lib/components/proxyList/proxyEntry.svelte';
+	import { ProxyList } from '$lib/const/proxyList';
+</script>
+
+<div class="listWithProxys">
+	<span>Use one of the proxies below</span>
+	<hr />
+	<div class="table">
+		<table>
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>IP</th>
+					<th>Country</th>
+					<th>Uptime</th>
+					<th>Response Time</th>
+				</tr>
+			</thead>
+			{#each ProxyList as proxy}
+				<ProxyEntry proxyEntry={proxy} />
+			{/each}
+		</table>
+	</div>
+</div>
+
+<style>
+	.listWithProxys {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		background-color: rgb(252, 252, 252);
+		border-radius: 10px;
+		box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.1);
+		z-index: 1;
+		margin-top: 2rem;
+		width: 50%;
+	}
+
+	.listWithProxys span {
+		font-size: 1.5rem;
+		font-weight: 500;
+		color: #000;
+		margin: 0.5rem 0;
+	}
+
+	.listWithProxys hr {
+		width: 100%;
+		border: 1px solid #000;
+	}
+
+	.listWithProxys table {
+		border-collapse: collapse;
+		width: 100%;
+		margin-top: 1rem;
+	}
+
+	.table {
+		max-height: 500px !important;
+		overflow-y: scroll;
+		width: 95%;
+	}
+
+	th {
+		padding: 20px 15px;
+		text-align: left;
+		font-weight: 500;
+		font-size: 12px;
+		color: black;
+		text-transform: uppercase;
+	}
+
+	/* on phone screen */
+	@media only screen and (max-width: 810px) {
+		.listWithProxys {
+			width: 80%;
+		}
+		.table {
+			width: 100%;
+		}
+	}
+</style>
