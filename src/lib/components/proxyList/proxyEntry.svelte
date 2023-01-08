@@ -20,6 +20,9 @@
 	});
 
 	function getPingColorClass(ping: number): string {
+		if (ping == -1 || ping > highPing) {
+			return 'highPing';
+		}
 		if (ping < lowPing) {
 			return 'lowPing';
 		} else if (ping < averagePing) {
@@ -29,6 +32,10 @@
 		}
 	}
 
+	function formatResponseTimeText(responseTime: number): string {
+		return responseTime == -1 ? 'Unreachable' : `${responseTime}ms`;
+	}
+
 	function copyIpToClipBoard(): void {
 		navigator.clipboard.writeText(`${proxyEntry.ip}:${proxyEntry.port}`);
 	}
@@ -36,13 +43,15 @@
 
 <tr>
 	<td>{proxyEntry.name}</td>
-	<td on:click={copyIpToClipBoard} on:keydown={copyIpToClipBoard}
+	<td class="ipAddress" on:click={copyIpToClipBoard} on:keydown={copyIpToClipBoard}
 		>{proxyEntry.ip}:{proxyEntry.port}</td
 	>
 	<td class="emojiFont">{getFlagEmoji(proxyEntry.country)}</td>
 	<!-- <td>{proxyEntry.uptime}</td> -->
 	{#if isFinishedPing}
-		<td class={getPingColorClass(proxyEntry.responseTime)}>{proxyEntry.responseTime}ms</td>
+		<td class={getPingColorClass(proxyEntry.responseTime)}
+			>{formatResponseTimeText(proxyEntry.responseTime)}</td
+		>
 	{:else}
 		<td>Pinging...</td>
 	{/if}
@@ -67,5 +76,9 @@
 	}
 	.averagePing {
 		color: yellow;
+	}
+
+	.ipAddress {
+		cursor: pointer;
 	}
 </style>

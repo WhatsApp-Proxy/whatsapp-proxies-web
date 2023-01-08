@@ -5,10 +5,20 @@
 	<span>© {new Date().getFullYear()} - WhatsApp Proxy</span>
 	<span>
 		Made with <span class="emojiFont">❤️</span> by
-		<a class="githubProfile" target="_blank" rel="noreferrer" href="https://github.com/GewoonJaap"
-			>Jaap</a
+		<a
+			class="githubProfile"
+			target="_blank"
+			rel="noreferrer"
+			href="https://github.com/GewoonJaap/whatsapp-proxies">Jaap</a
 		>
 	</span>
+	<span class="addYourProxy"
+		>Add your proxy <a
+			href="https://github.com/GewoonJaap/whatsapp-proxies/issues/new/choose"
+			target="_blank"
+			rel="noreferrer">here</a
+		></span
+	>
 	<span class="disclaimer">
 		This app is Neither affiliated with nor endorsed by WhatsApp Inc. The official WhatsApp Inc
 		website can be found at <a href="https://whatsapp.com/" target="_blank" rel="noreferrer"
@@ -46,8 +56,10 @@
 		margin: 0.5rem 0;
 	}
 
-	.disclaimer a {
+	.addYourProxy {
+		font-size: 1.25em !important;
+		font-weight: 500;
 		color: #000;
-		text-decoration: underline;
+		margin: 0.5rem 0;
 	}
 </style>

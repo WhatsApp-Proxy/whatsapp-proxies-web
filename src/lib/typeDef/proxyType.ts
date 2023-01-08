@@ -3,7 +3,7 @@ export interface ProxyType {
 	ip: string;
 	port: number;
 	country: string;
-	uptime: string;
+	uptime: string | undefined;
 	responseTime: number;
 	lastChecked: string | undefined;
 }
