@@ -1,10 +1,9 @@
 ---
 name: Suggest new Proxy
 about: Suggest a new proxy for people to use
-title: "[NEW Proxy]"
+title: '[NEW Proxy]'
 labels: new-proxy
 assignees: GewoonJaap
-
 ---
 
 ## Proxy Name

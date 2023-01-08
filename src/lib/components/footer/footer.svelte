@@ -12,13 +12,15 @@
 			href="https://github.com/GewoonJaap/whatsapp-proxies">Jaap</a
 		>
 	</span>
-	<span class="addYourProxy"
-		>Add your proxy <a
+	<span class="addYourProxy">
+		<a
 			href="https://github.com/GewoonJaap/whatsapp-proxies/issues/new/choose"
 			target="_blank"
-			rel="noreferrer">here</a
-		></span
-	>
+			rel="noreferrer"
+		>
+			Add your proxy here
+		</a>
+	</span>
 	<span class="disclaimer">
 		This app is Neither affiliated with nor endorsed by WhatsApp Inc. The official WhatsApp Inc
 		website can be found at <a href="https://whatsapp.com/" target="_blank" rel="noreferrer"
