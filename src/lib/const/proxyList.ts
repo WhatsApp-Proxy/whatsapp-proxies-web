@@ -26,5 +26,14 @@ export const ProxyList: ProxyType[] = [
 		uptime: '100%',
 		responseTime: 500,
 		lastChecked: '2021-05-01 12:00:00'
+	},
+	{
+		name: "Jaiden051's Proxy",
+		ip: '51.14.190.56',
+		port: 5222,
+		country: 'GB',
+		uptime: '100%',
+		responseTime: 500,
+		lastChecked: '2021-05-01 12:00:00'
 	}
 ];
