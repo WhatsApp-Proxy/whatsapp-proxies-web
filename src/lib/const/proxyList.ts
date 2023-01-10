@@ -41,7 +41,7 @@ export const ProxyList: ProxyServerApi[] = [
 		ipAddress: '51.14.190.56',
 		proxyPort: 5222,
 		serverName: "Jaiden051's Proxy",
-		country: 'VK',
+		country: 'GB',
 		pendingDeletion: false,
 		createdBy: '63bd685697037238a8beb438',
 		createdAt: '2023-01-10T15:11:00.374Z',
