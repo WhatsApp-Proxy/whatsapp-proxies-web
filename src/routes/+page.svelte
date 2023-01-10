@@ -31,7 +31,7 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		height: 100vh;
+		min-height: 100vh;
 		background-color: white;
 	}
 
@@ -86,7 +86,6 @@
 
 	@media only screen and (max-width: 810px) {
 		.content {
-			padding-top: 2rem !important;
 			margin-left: 0.5em;
 			margin-right: 0.5em;
 			text-align: center;

@@ -3,12 +3,16 @@
 	import { ProxyList } from '$lib/const/proxyList';
 	import { onMount } from 'svelte';
 	import { proxyListFromApi } from '$lib/util/proxyListFromApi';
+	import type { ProxyServerApi } from '$lib/typeDef/proxyApiReponse';
+
+	let proxyList: ProxyServerApi[] = [];
 
 	onMount(async () => {
-		let proxyList = ProxyList;
 		const proxyData = await proxyListFromApi();
 		if (proxyData.error == null) {
 			proxyList = proxyData.data;
+		} else {
+			proxyList = ProxyList;
 		}
 	});
 </script>
@@ -16,22 +20,27 @@
 <div class="listWithProxys">
 	<span>Use one of the proxies below</span>
 	<hr />
-	<div class="table">
-		<table>
-			<thead>
-				<tr>
-					<th>Name</th>
-					<th>IP</th>
-					<th>Country</th>
-					<!-- <th>Uptime</th> -->
-					<th>Response Time</th>
-				</tr>
-			</thead>
-			{#each ProxyList as proxy}
-				<ProxyEntry proxyEntry={proxy} />
-			{/each}
-		</table>
-	</div>
+	{#if proxyList.length != 0}
+		<div class="table">
+			<table>
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>IP</th>
+						<th>Country</th>
+						<!-- <th>Uptime</th> -->
+						<th>Response Time</th>
+					</tr>
+				</thead>
+
+				{#each proxyList as proxy}
+					<ProxyEntry proxyEntry={proxy} />
+				{/each}
+			</table>
+		</div>
+	{:else}
+		<span>Loading proxies...</span>
+	{/if}
 </div>
 
 <style>
