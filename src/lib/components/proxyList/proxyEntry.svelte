@@ -1,9 +1,10 @@
 <script lang="ts">
-	import type { ProxyType } from '$lib/typeDef/proxyType';
+	import type { ProxyServerApi } from '$lib/typeDef/proxyApiReponse';
+	import { calculatePing } from '$lib/util/calculatePing';
 	import { getFlagEmoji } from '$lib/util/countryToEmoji';
 	import { onMount } from 'svelte';
 	import ConnectButton from './connectButton.svelte';
-	export let proxyEntry: ProxyType;
+	export let proxyEntry: ProxyServerApi;
 
 	let isFinishedPing = false;
 	const highPing = 500;
@@ -11,11 +12,18 @@
 	const averagePing = 300;
 
 	onMount(async () => {
-		const pingResponse = await fetch(
-			`https://latency.mrproper.dev/?ip=${proxyEntry.ip}&port=${proxyEntry.port}`
-		);
-		const pingResponseJson = await pingResponse.json();
-		proxyEntry.responseTime = pingResponseJson.latency;
+		let pingResponseTime = 0;
+		if (proxyEntry.discoveryPort) {
+			pingResponseTime = await calculatePing(proxyEntry.ipAddress, proxyEntry.discoveryPort);
+		}
+		if (pingResponseTime == 0) {
+			const pingResponse = await fetch(
+				`https://latency.mrproper.dev/?ip=${proxyEntry.ipAddress}&port=${proxyEntry.proxyPort}`
+			);
+			const pingResponseJson = await pingResponse.json();
+			pingResponseTime = pingResponseJson.latency;
+		}
+		proxyEntry.responseTime = pingResponseTime;
 		isFinishedPing = true;
 	});
 
@@ -37,20 +45,20 @@
 	}
 
 	function copyIpToClipBoard(): void {
-		navigator.clipboard.writeText(`${proxyEntry.ip}:${proxyEntry.port}`);
+		navigator.clipboard.writeText(`${proxyEntry.ipAddress}:${proxyEntry.proxyPort}`);
 	}
 </script>
 
 <tr>
-	<td>{proxyEntry.name}</td>
+	<td>{proxyEntry.serverName}</td>
 	<td class="ipAddress" on:click={copyIpToClipBoard} on:keydown={copyIpToClipBoard}
-		>{proxyEntry.ip}:{proxyEntry.port}</td
+		>{proxyEntry.ipAddress}:{proxyEntry.proxyPort}</td
 	>
 	<td class="emojiFont">{getFlagEmoji(proxyEntry.country)}</td>
 	<!-- <td>{proxyEntry.uptime}</td> -->
 	{#if isFinishedPing}
-		<td class={getPingColorClass(proxyEntry.responseTime)}
-			>{formatResponseTimeText(proxyEntry.responseTime)}</td
+		<td class={getPingColorClass(proxyEntry.responseTime ?? -1)}
+			>{formatResponseTimeText(proxyEntry.responseTime ?? -1)}</td
 		>
 	{:else}
 		<td>Pinging...</td>
@@ -75,7 +83,7 @@
 		color: green;
 	}
 	.averagePing {
-		color: yellow;
+		color: rgb(153, 153, 0);
 	}
 
 	.ipAddress {

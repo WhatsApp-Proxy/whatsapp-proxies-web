@@ -1,7 +1,16 @@
 <script lang="ts">
-	import type { ProxyType } from '$lib/typeDef/proxyType';
 	import ProxyEntry from '$lib/components/proxyList/proxyEntry.svelte';
 	import { ProxyList } from '$lib/const/proxyList';
+	import { onMount } from 'svelte';
+	import { proxyListFromApi } from '$lib/util/proxyListFromApi';
+
+	onMount(async () => {
+		let proxyList = ProxyList;
+		const proxyData = await proxyListFromApi();
+		if (proxyData.error == null) {
+			proxyList = proxyData.data;
+		}
+	});
 </script>
 
 <div class="listWithProxys">
