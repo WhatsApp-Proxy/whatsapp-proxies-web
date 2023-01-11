@@ -1,25 +1,20 @@
-<script lang="ts">
-	import ProxyTable from '$lib/components/proxyList/proxyTable.svelte';
+<script>
 	import Footer from '$lib/components/footer/footer.svelte';
+	import { MirrorSiteList } from '$lib/const/mirrorList';
 </script>
 
 <div class="content">
 	<div class="header">
 		<h1>WhatsApp Proxy</h1>
-		<span class="callToAction">The only site you'll ever need to find WhatsApp Proxies</span>
-		<span>We offer a wide range of highly available proxies</span>
-		<span class="howToConnect">
-			Not sure how to connect?
-			<a
-				href="https://faq.whatsapp.com/520504143274092/?cms_platform=web&helpref=platform_switcher"
-				target="_blank"
-				rel="noreferrer"
-			>
-				Follow this guide
-			</a>
-		</span>
+		<span>Is our site blocked in your country? Try one of our mirrored websites!</span>
 	</div>
-	<ProxyTable />
+	<div class="listWithMirrors">
+		<ul>
+			{#each MirrorSiteList as mirror}
+				<li><a href={mirror}>{mirror}</a></li>
+			{/each}
+		</ul>
+	</div>
 	<div class="footerComponent">
 		<Footer />
 	</div>
@@ -56,25 +51,6 @@
 		color: #000;
 		margin: 0.5rem 0;
 		margin-bottom: 0.5em !important;
-	}
-
-	.callToAction {
-		font-size: 2rem !important;
-		font-weight: 700;
-		color: rgb(24, 24, 24);
-		margin-bottom: 2em !important;
-	}
-
-	.howToConnect {
-		font-size: 1.5rem;
-		font-weight: 500;
-		color: #000;
-		margin: 0.5rem 0;
-	}
-
-	.howToConnect a {
-		color: #000;
-		text-decoration: underline;
 	}
 
 	@media only screen and (max-width: 810px) {
