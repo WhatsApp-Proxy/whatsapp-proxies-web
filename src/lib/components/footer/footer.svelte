@@ -22,7 +22,7 @@
 		</a>
 	</span>
 	<span class="disclaimer">
-		This app is Neither affiliated with nor endorsed by WhatsApp Inc. The official WhatsApp Inc
+		This app is neither affiliated with nor endorsed by WhatsApp Inc. The official WhatsApp Inc
 		website can be found at <a href="https://whatsapp.com/" target="_blank" rel="noreferrer"
 			>https://whatsapp.com</a
 		>
