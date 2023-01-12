@@ -14,7 +14,6 @@ assignees: 'GewoonJaap'
 
 <!-- Which browser and resolution are you using? -->
 
-
 ## Screenshots or videos
 
 <!-- DELETE THIS SECTION IF NOT APPLICABLE -->
