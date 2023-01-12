@@ -1,8 +1,10 @@
 <script lang="ts">
 	import ProxyTable from '$lib/components/proxyList/proxyTable.svelte';
 	import Footer from '$lib/components/footer/footer.svelte';
+	import Navbar from '$lib/components/navbar/navbar.svelte';
 </script>
 
+<Navbar />
 <div class="content">
 	<div class="header">
 		<h1>WhatsApp Proxy</h1>
@@ -20,9 +22,9 @@
 		</span>
 	</div>
 	<ProxyTable />
-	<div class="footerComponent">
-		<Footer />
-	</div>
+</div>
+<div class="footerComponent">
+	<Footer />
 </div>
 
 <style>
@@ -31,7 +33,7 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		min-height: 100vh;
+		/* min-height: 100vh; */
 		background-color: white;
 	}
 

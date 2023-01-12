@@ -7,5 +7,6 @@ export const MirrorSiteList = [
 	'https://whatsapp-proxies.net',
 	'https://whatsapp-proxies.org',
 	'https://whatsapp-proxies.info',
-	'https://whatsapp-proxies.online'
+	'https://whatsapp-proxies.online',
+	'https://wa-proxy.com'
 ];

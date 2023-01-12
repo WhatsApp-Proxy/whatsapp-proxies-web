@@ -63,7 +63,7 @@
 	</script>
 
 	<body data-sveltekit-preload-data="hover">
-		<div style="display: contents">%sveltekit.body%</div>
+		<div class="mainContent">%sveltekit.body%</div>
 	</body>
 </html>
 
@@ -73,6 +73,17 @@
 		font-family: 'Lato', sans-serif;
 		margin: 0;
 		padding: 0;
+		overflow-x: hidden;
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+	}
+
+	.content {
+		flex: 1 0 auto;
+	}
+	.defaultFont {
+		font-family: 'Lato', sans-serif;
 	}
 
 	.emojiFont {

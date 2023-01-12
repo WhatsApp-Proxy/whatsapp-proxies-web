@@ -37,6 +37,7 @@
 		justify-content: center;
 		background-color: white;
 		margin-top: 2rem;
+		flex-shrink: 0;
 	}
 
 	.footer span {
@@ -44,6 +45,7 @@
 		font-weight: 500;
 		color: #000;
 		margin: 0.5rem 0;
+		text-align: center;
 	}
 
 	.githubProfile {

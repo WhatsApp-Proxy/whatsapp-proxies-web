@@ -13,9 +13,10 @@
 
 	onMount(async () => {
 		let pingResponseTime = 0;
-		if (proxyEntry.discoveryPort) {
-			pingResponseTime = await calculatePing(proxyEntry.ipAddress, proxyEntry.discoveryPort);
-		}
+		// if (proxyEntry.discoveryPort) {
+		// 	pingResponseTime = await calculatePing(proxyEntry.ipAddress, proxyEntry.discoveryPort);
+		// } Disabled because it doesnt work with HTTPS enabled..
+
 		if (pingResponseTime == 0 || pingResponseTime == -1) {
 			const pingResponse = await fetch(
 				`https://latency.mrproper.dev/?ip=${proxyEntry.ipAddress}&port=${proxyEntry.proxyPort}`

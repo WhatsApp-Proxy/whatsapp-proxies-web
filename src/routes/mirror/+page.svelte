@@ -1,8 +1,10 @@
 <script>
 	import Footer from '$lib/components/footer/footer.svelte';
+	import Navbar from '$lib/components/navbar/navbar.svelte';
 	import { MirrorSiteList } from '$lib/const/mirrorList';
 </script>
 
+<Navbar />
 <div class="content">
 	<div class="header">
 		<h1>WhatsApp Proxy</h1>
@@ -11,13 +13,13 @@
 	<div class="listWithMirrors">
 		<ul>
 			{#each MirrorSiteList as mirror}
-				<li><a href={mirror}>{mirror}</a></li>
+				<li class="mirrorItem"><a href={mirror}>{mirror}</a></li>
 			{/each}
 		</ul>
 	</div>
-	<div class="footerComponent">
-		<Footer />
-	</div>
+</div>
+<div class="footerComponent">
+	<Footer />
 </div>
 
 <style>
@@ -25,8 +27,8 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		justify-content: center;
-		min-height: 100vh;
+		/* justify-content: center; */
+		/* min-height: 100vh; */
 		background-color: white;
 	}
 
@@ -51,6 +53,13 @@
 		color: #000;
 		margin: 0.5rem 0;
 		margin-bottom: 0.5em !important;
+	}
+
+	.mirrorItem {
+		font-size: 1.5rem;
+		font-weight: 500;
+		color: #000;
+		margin: 0.5rem 0;
 	}
 
 	@media only screen and (max-width: 810px) {
