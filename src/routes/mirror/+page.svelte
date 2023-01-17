@@ -2,7 +2,10 @@
 	import Footer from '$lib/components/footer/footer.svelte';
 	import Navbar from '$lib/components/navbar/navbar.svelte';
 	import { MirrorSiteList } from '$lib/const/mirrorList';
-	import '@lottiefiles/lottie-player';
+	import { onMount } from 'svelte';
+	onMount(async () => {
+		await import('@lottiefiles/lottie-player');
+	});
 </script>
 
 <Navbar />

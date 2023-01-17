@@ -1,7 +1,10 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
 	import { HomeRoute } from '$lib/const/routes';
-	import '@lottiefiles/lottie-player';
+	import { onMount } from 'svelte';
+	onMount(async () => {
+		await import('@lottiefiles/lottie-player');
+	});
 
 	function routeTo(route: string) {
 		goto(route);

@@ -3,7 +3,10 @@
 	import Navbar from '$lib/components/navbar/navbar.svelte';
 	import { goto } from '$app/navigation';
 	import { HomeRoute } from '$lib/const/routes';
-	import '@lottiefiles/lottie-player';
+	import { onMount } from 'svelte';
+	onMount(async () => {
+		await import('@lottiefiles/lottie-player');
+	});
 </script>
 
 <Navbar />

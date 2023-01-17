@@ -35,6 +35,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@lottiefiles/lottie-player": "^1.6.3"
+		"@lottiefiles/lottie-player": "^1.6.3",
+		"@lottiefiles/svelte-lottie-player": "^0.3.0"
 	}
 }
