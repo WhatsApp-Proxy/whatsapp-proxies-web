@@ -34,5 +34,7 @@
 		"vitest": "^0.25.3"
 	},
 	"type": "module",
-	"dependencies": {}
+	"dependencies": {
+		"@lottiefiles/lottie-player": "^1.6.3"
+	}
 }

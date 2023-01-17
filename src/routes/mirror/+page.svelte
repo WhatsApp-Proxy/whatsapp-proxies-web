@@ -2,10 +2,19 @@
 	import Footer from '$lib/components/footer/footer.svelte';
 	import Navbar from '$lib/components/navbar/navbar.svelte';
 	import { MirrorSiteList } from '$lib/const/mirrorList';
+	import '@lottiefiles/lottie-player';
 </script>
 
 <Navbar />
 <div class="content">
+	<lottie-player
+		autoplay={true}
+		loop
+		mode="normal"
+		src="https://assets6.lottiefiles.com/packages/lf20_vpxae5vy.json"
+		style="width: 60px"
+		speed="0.5"
+	/>
 	<div class="header">
 		<h1>WhatsApp Proxy</h1>
 		<span>Is our site blocked in your country? Try one of our mirrored websites!</span>

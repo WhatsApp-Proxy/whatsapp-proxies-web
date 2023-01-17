@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
-	import { HomeRoute, MirrorRoute } from '$lib/const/routes';
+	import { HomeRoute, MirrorRoute, HowToConnectRoute } from '$lib/const/routes';
 
 	function routeTo(route: string) {
 		goto(route);
@@ -11,6 +11,9 @@
 <div class="navbarContent">
 	<div class="routeButtons">
 		<button on:click={() => routeTo(HomeRoute)} class="routeButton defaultFont">Home</button>
+		<button on:click={() => routeTo(HowToConnectRoute)} class="routeButton defaultFont"
+			>How to connect</button
+		>
 		<button on:click={() => routeTo(MirrorRoute)} class="routeButton defaultFont">Mirrors</button>
 	</div>
 </div>
