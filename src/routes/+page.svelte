@@ -2,6 +2,7 @@
 	import ProxyTable from '$lib/components/proxyList/proxyTable.svelte';
 	import Footer from '$lib/components/footer/footer.svelte';
 	import Navbar from '$lib/components/navbar/navbar.svelte';
+	import ProxyInfo from '$lib/components/homepage/proxyInfo.svelte';
 </script>
 
 <Navbar />
@@ -22,6 +23,7 @@
 		</span>
 	</div>
 	<ProxyTable />
+	<ProxyInfo />
 </div>
 <div class="footerComponent">
 	<Footer />

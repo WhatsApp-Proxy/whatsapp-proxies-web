@@ -17,7 +17,8 @@
 	});
 </script>
 
-<div class="listWithProxys">
+<!-- #proxyTable here -->
+<div class="listWithProxys" id="proxyTable">
 	<span>Use one of the proxies below</span>
 	<hr />
 	{#if proxyList.length != 0}
