@@ -3,8 +3,17 @@
 	import Footer from '$lib/components/footer/footer.svelte';
 	import Navbar from '$lib/components/navbar/navbar.svelte';
 	import ProxyInfo from '$lib/components/homepage/proxyInfo.svelte';
+	import SEO from '$lib/components/SEO/index.svelte';
+	import { HowToConnectRoute } from '$lib/const/routes';
+	const SEOTags = {
+		metadescription:
+			'All your WhatsApp Proxies in one place. Using a WhatsApp proxy ensures that you can use WhatsApp anytime, anywhere!',
+		slug: '',
+		title: ' All your WhatsApp Proxies in one place'
+	};
 </script>
 
+<SEO {...SEOTags} />
 <Navbar />
 <div class="content">
 	<div class="header">
@@ -13,13 +22,7 @@
 		<span>We offer a wide range of highly available proxies</span>
 		<span class="howToConnect">
 			Not sure how to connect?
-			<a
-				href="https://faq.whatsapp.com/520504143274092/?cms_platform=web&helpref=platform_switcher"
-				target="_blank"
-				rel="noreferrer"
-			>
-				Follow this guide
-			</a>
+			<a href={HowToConnectRoute}> Follow this guide </a>
 		</span>
 	</div>
 	<ProxyTable />

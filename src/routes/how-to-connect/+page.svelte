@@ -1,14 +1,21 @@
 <script>
 	import Footer from '$lib/components/footer/footer.svelte';
 	import Navbar from '$lib/components/navbar/navbar.svelte';
+	import SEO from '$lib/components/SEO/index.svelte';
 	import { goto } from '$app/navigation';
 	import { HomeRoute } from '$lib/const/routes';
 	import { onMount } from 'svelte';
 	onMount(async () => {
 		await import('@lottiefiles/lottie-player');
 	});
+	const SEOTags = {
+		metadescription: 'Not sure how to connect to one of our secure proxies? Look no further!',
+		slug: 'how-to-connect',
+		title: 'How to connect to a secure proxy'
+	};
 </script>
 
+<SEO {...SEOTags} />
 <Navbar />
 <div class="content">
 	<lottie-player
@@ -28,6 +35,7 @@
 		>
 	</div>
 	<div class="connectSteps">
+		<hr />
 		<h2>Step 1</h2>
 		<p>Make sure you are using the most current version of WhatsApp.</p>
 		<h2>Step 2</h2>
@@ -104,6 +112,11 @@
 		margin-top: 1em;
 	}
 
+	.connectSteps hr {
+		width: 50%;
+		border: 1px solid #000;
+	}
+
 	.connectSteps h2 {
 		font-size: 1.5rem;
 		font-weight: 500;
@@ -133,6 +146,9 @@
 			margin-right: 0.5em;
 			text-align: center;
 			margin-bottom: 1em;
+		}
+		.connectSteps hr {
+			width: 75%;
 		}
 	}
 </style>
