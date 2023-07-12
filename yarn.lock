@@ -433,13 +433,13 @@
   dependencies:
     import-meta-resolve "^2.2.0"
 
-"@sveltejs/adapter-cloudflare@^2.3.0":
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/@sveltejs/adapter-cloudflare/-/adapter-cloudflare-2.3.0.tgz#931f5539f8c23a2796ef82bc3476c5caeb3db5f5"
-  integrity sha512-4rUtQG1rfenLh3V+w8DSfmtv/l3pGBdxjvJ68oAVX7Lpm2yHUaKPmPVOA7EuQiP0BOB/TSZVmIF8c5SnTlrYXQ==
+"@sveltejs/adapter-cloudflare@^2.3.1":
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/@sveltejs/adapter-cloudflare/-/adapter-cloudflare-2.3.1.tgz#9d63c92b0e3de8b09eae17e95a88599d87763783"
+  integrity sha512-T+A8LZf70T6hqXj+amN+2mkaZrVDhrr2mzqFUlw2H8M5ClTkBVc8F0EEDQUaRlSQ+RBIFXIltPWUjfSNfb5uPw==
   dependencies:
     "@cloudflare/workers-types" "^4.20230404.0"
-    esbuild "^0.17.18"
+    esbuild "^0.18.11"
     worktop "0.8.0-next.15"
 
 "@sveltejs/adapter-netlify@^2.0.7":
@@ -986,7 +986,7 @@ esbuild@^0.17.18:
     "@esbuild/win32-ia32" "0.17.19"
     "@esbuild/win32-x64" "0.17.19"
 
-esbuild@^0.18.10:
+esbuild@^0.18.10, esbuild@^0.18.11:
   version "0.18.11"
   resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.18.11.tgz#cbf94dc3359d57f600a0dbf281df9b1d1b4a156e"
   integrity sha512-i8u6mQF0JKJUlGR3OdFLKldJQMMs8OqM9Cc3UCi9XXziJ9WERM5bfkHaEAy0YAvPRMgqSW55W7xYn84XtEFTtA==
