@@ -63,7 +63,7 @@
 			<!-- TEXT 9 -->
 			{$_('PROXY_INFO_TEXT_9')}
 			<a href="#proxyTable">{$_('TABLE')}</a>
-			{$_('above')}.
+			{$_('ABOVE')}.
 		</p1>
 	</div>
 	<hr />
