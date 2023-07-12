@@ -369,10 +369,10 @@
   dependencies:
     "@lit-labs/ssr-dom-shim" "^1.0.0"
 
-"@lottiefiles/lottie-player@^1.6.3":
-  version "1.6.3"
-  resolved "https://registry.yarnpkg.com/@lottiefiles/lottie-player/-/lottie-player-1.6.3.tgz#291e7fc69521ed97781a644893f9d59051c8d56c"
-  integrity sha512-2570WT+/q+S792UtysxshvEIhuEQ7sDJbyXeflF93mpGGZDP8gsMxplgOPZw9vsuRxFS85gfjGnVPAJD4hhaew==
+"@lottiefiles/lottie-player@^2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@lottiefiles/lottie-player/-/lottie-player-2.0.2.tgz#1c882b2c6b99c2a94e81773bb0fc0f163cefd674"
+  integrity sha512-R9WF2/gFboZ0GW3QjqtbZF94JQq8oI1t5XWZPtTypvk2xTizphybZu+c08QFQbqY6rnkazHIyRBj2MK0qr6Hrw==
   dependencies:
     "@types/pako" "^1.0.1"
     lit "^2.1.2"
