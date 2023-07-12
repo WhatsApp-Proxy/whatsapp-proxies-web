@@ -13,7 +13,7 @@ export function setupLocale() {
     addMessages('fa', fa);
 
 	init({
-		fallbackLocale: 'fa',
+		fallbackLocale: 'en',
 		initialLocale: getLocaleFromNavigator()
 	});
 }
