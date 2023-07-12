@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
 	import { HomeRoute, MirrorRoute, HowToConnectRoute } from '$lib/const/routes';
-	import { setupLocale } from '$lib/locale/i18';
+	import { setupLocale, setLocale } from '$lib/locale/i18';
 	import { _ } from 'svelte-i18n';
 
 	setupLocale();
@@ -9,6 +9,10 @@
 	function routeTo(route: string) {
 		goto(route);
 		return;
+	}
+
+	function englishLanguage(){
+		setLocale('en');
 	}
 </script>
 
@@ -23,9 +27,13 @@
 			>{$_('MIRRORS')}</button
 		>
 	</div>
+	<div class="rightContent">
+		<button on:click={() => englishLanguage()} class="emojiFont languageSwitcher routeButton">🇬🇧</button>
+		</div>
 </div>
 
 <style>
+	
 	.navbarContent {
 		display: flex;
 		flex-direction: row;
