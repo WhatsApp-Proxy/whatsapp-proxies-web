@@ -5,6 +5,10 @@
 	import { onMount } from 'svelte';
 	import ConnectButton from './connectButton.svelte';
 	export let proxyEntry: ProxyServerApi;
+	import { setupLocale } from '$lib/locale/i18';
+	import { _ } from 'svelte-i18n';
+
+	setupLocale();
 
 	let isFinishedPing = false;
 	const highPing = 500;

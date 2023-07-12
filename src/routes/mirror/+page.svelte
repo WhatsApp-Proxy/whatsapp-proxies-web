@@ -4,6 +4,11 @@
 	import { MirrorSiteList } from '$lib/const/mirrorList';
 	import SEO from '$lib/components/SEO/index.svelte';
 	import { onMount } from 'svelte';
+	import { setupLocale } from '$lib/locale/i18';
+	import { _ } from 'svelte-i18n';
+
+	setupLocale();
+
 	onMount(async () => {
 		await import('@lottiefiles/lottie-player');
 	});
@@ -26,8 +31,8 @@
 		speed="0.5"
 	/>
 	<div class="header">
-		<h1>WhatsApp Proxy</h1>
-		<span>Is our site blocked in your country? Try one of our mirrored websites!</span>
+		<h1>{$_('SITE_NAME')}</h1>
+		<span>{$_('WEBSITE_BLOCKED')}</span>
 	</div>
 	<div class="listWithMirrors">
 		<ul>
@@ -39,12 +44,13 @@
 	<div class="mirrorDescription">
 		<hr />
 		<p class="defaultFont">
-			There are many reasons why our site may be blocked in your country. We have a list of mirror
-			sites you can use to access our site.
-			<br />While our main site may be blocked in your country, our mirror sites are not.
-			<br />If you have trouble reaching our site, try one of our mirror sites.
-			<br />We constantly check if our site is blocked in your country and will add and remove
-			mirror sites if necessary.
+			{$_('MIRROR_USAGE_1')}
+			<br />
+			{$_('MIRROR_USAGE_2')}
+			<br />
+			{$_('MIRROR_USAGE_3')}
+			<br />
+			{$_('MIRROR_USAGE_4')}
 		</p>
 	</div>
 </div>

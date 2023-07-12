@@ -5,6 +5,11 @@
 	import ProxyInfo from '$lib/components/homepage/proxyInfo.svelte';
 	import SEO from '$lib/components/SEO/index.svelte';
 	import { HowToConnectRoute } from '$lib/const/routes';
+	import { setupLocale } from '$lib/locale/i18';
+	import { _ } from 'svelte-i18n';
+
+	setupLocale();
+
 	const SEOTags = {
 		metadescription:
 			'All your WhatsApp Proxies in one place. Using a WhatsApp proxy ensures that you can use WhatsApp anytime, anywhere!',
@@ -17,12 +22,12 @@
 <Navbar />
 <div class="content">
 	<div class="header">
-		<h1>WhatsApp Proxy</h1>
-		<span class="callToAction">The only site you'll ever need to find WhatsApp Proxies</span>
-		<span>We offer a wide range of highly available proxies</span>
+		<h1>{$_('SITE_NAME')}</h1>
+		<span class="callToAction">{$_('THE_ONLY_SITE_YOU_NEED')}</span>
+		<span>{$_('WE_OFFER_WIDE_VARIETY')}</span>
 		<span class="howToConnect">
-			Not sure how to connect?
-			<a href={HowToConnectRoute}> Follow this guide </a>
+			{$_('NOT_SURE_HOW_TO_CONNECT')}
+			<a href={HowToConnectRoute}> {$_('FOLLOW_THIS_GUIDE')} </a>
 		</span>
 	</div>
 	<ProxyTable />

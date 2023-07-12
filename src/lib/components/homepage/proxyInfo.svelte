@@ -2,6 +2,11 @@
 	import { goto } from '$app/navigation';
 	import { HomeRoute } from '$lib/const/routes';
 	import { onMount } from 'svelte';
+	import { setupLocale } from '$lib/locale/i18';
+	import { _ } from 'svelte-i18n';
+
+	setupLocale();
+
 	onMount(async () => {
 		await import('@lottiefiles/lottie-player');
 	});
@@ -23,32 +28,42 @@
 		speed="0.25"
 	/>
 	<div class="proxyInfoText">
-		<h2 class="headerText">The benefits of using a WhatsApp proxy in {new Date().getFullYear()}</h2>
+		<h2 class="headerText">{$_('BENEFITS_OF_USING_PROXY')} {new Date().getFullYear()}</h2>
 		<p1 class="defaultFont">
-			Unlock the full potential of WhatsApp with a reliable and secure proxy.
-			<br />Whether you're living in a country where access to the popular messaging service is
-			restricted or facing internet shutdowns, a WhatsApp proxy is the solution you need.
-			<br />The latest version of WhatsApp comes with proxy support for Android and iOS, allowing
-			you to connect to a server in a country where WhatsApp is accessible.
+			<!-- TEXT 1 -->
+			{$_('PROXY_INFO_TEXT_1')}
+			<br />
+			<!-- TEXT 2 -->
+			{$_('PROXY_INFO_TEXT_2')}
+			<br />
+			<!-- TEXT 3 -->
+			{$_('PROXY_INFO_TEXT_3')}
 		</p1>
 		<p1 class="defaultFont">
-			A WhatsApp proxy is a server located in a country where WhatsApp is accessible. By connecting
-			to this server, you can access WhatsApp from any location in the world, bypassing censorship
-			and internet restrictions.
+			<!-- TEXT 4 -->
+			{$_('PROXY_INFO_TEXT_4')}
 		</p1>
 		<p1 class="defaultFont">
-			Our team at <a href={HomeRoute}>WhatsApp-proxy.com</a> has researched and compiled a list of the
-			best WhatsApp proxies available, ensuring that your connection is secure and reliable.
+			{$_('OUR_TEAM_AT')} <a href={HomeRoute}>WhatsApp-proxy.com</a>
+			{$_('OUR_TEAM_AT_2')}
 		</p1>
 		<p1 class="defaultFont">
-			Don't let censorship get in the way of staying in touch with friends and family.
-			<br />With our list of secure WhatsApp proxies, you can keep using the messaging service
-			uninterrupted.
-			<br />Trust in our expertise and experience to find the perfect proxy for you. Visit
+			<!-- TEXT 5 -->
+			{$_('PROXY_INFO_TEXT_5')}
+			<br />
+			<!-- TEXT 6 -->
+			{$_('PROXY_INFO_TEXT_6')}
+			<br />
+			<!-- TEXT 7 -->
+			{$_('PROXY_INFO_TEXT_7')}
 			<a href={HomeRoute}>WhatsApp-proxy.com</a>
-			today and stay connected with the world.
-			<br />As a WhatsApp user, you can connect to any of the ip addresses in the
-			<a href="#proxyTable">table</a> above.
+			<!-- TEXT 8 -->
+			{$_('PROXY_INFO_TEXT_8')}
+			<br />
+			<!-- TEXT 9 -->
+			{$_('PROXY_INFO_TEXT_9')}
+			<a href="#proxyTable">{$_('TABLE')}</a>
+			{$_('above')}.
 		</p1>
 	</div>
 	<hr />

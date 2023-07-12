@@ -4,6 +4,10 @@
 	import { onMount } from 'svelte';
 	import { proxyListFromApi } from '$lib/util/proxyListFromApi';
 	import type { ProxyServerApi } from '$lib/typeDef/proxyApiReponse';
+	import { setupLocale } from '$lib/locale/i18';
+	import { _ } from 'svelte-i18n';
+
+	setupLocale();
 
 	let proxyList: ProxyServerApi[] = [];
 
@@ -19,18 +23,18 @@
 
 <!-- #proxyTable here -->
 <div class="listWithProxys" id="proxyTable">
-	<span>Use one of the proxies below</span>
+	<span>{$_('USE_ONE_OF_THE_PROXIES_BELOW')}</span>
 	<hr />
 	{#if proxyList.length != 0}
 		<div class="table">
 			<table>
 				<thead>
 					<tr>
-						<th>Name</th>
-						<th>IP</th>
-						<th>Country</th>
+						<th>{$_('NAME')}</th>
+						<th>{$_('IP')}</th>
+						<th>{$_('COUNTRY')}</th>
 						<!-- <th>Uptime</th> -->
-						<th>Response Time</th>
+						<th>{$_('RESPONSE_TIME')}</th>
 					</tr>
 				</thead>
 
@@ -40,7 +44,7 @@
 			</table>
 		</div>
 	{:else}
-		<span>Loading proxies...</span>
+		<span>{$_('LOADING_PROXIES')}</span>
 	{/if}
 </div>
 

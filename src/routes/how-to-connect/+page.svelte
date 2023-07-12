@@ -5,6 +5,11 @@
 	import { goto } from '$app/navigation';
 	import { HomeRoute } from '$lib/const/routes';
 	import { onMount } from 'svelte';
+	import { setupLocale } from '$lib/locale/i18';
+	import { _ } from 'svelte-i18n';
+
+	setupLocale();
+
 	onMount(async () => {
 		await import('@lottiefiles/lottie-player');
 	});
@@ -28,38 +33,40 @@
 		alt="Connecting infographic"
 	/>
 	<div class="header">
-		<h1>How to connect?</h1>
-		<span>Not sure how to connect to one of our secure proxies? Look no further!</span>
+		<h1>{$_('HOW_TO_CONNECT')}?</h1>
+		<span>{$_('NOT_SURE_HOW_TO_CONNECT_2')}</span>
 		<p1 class="callToActionHomePage"
-			>We offer a wide variety of secure proxies, visit our <a href={HomeRoute}>home page</a></p1
+			>{$_('VISIT_OUR_HOME_PAGE')} <a href={HomeRoute}>{$_('HOME_PAGE')}</a></p1
 		>
 	</div>
 	<div class="connectSteps">
 		<hr />
-		<h2>Step 1</h2>
-		<p>Make sure you are using the most current version of WhatsApp.</p>
-		<h2>Step 2</h2>
-		<p>Go to WhatsApp <span class="bold">Settings</span>.</p>
-		<h2>Step 3</h2>
-		<p>Tap <span class="bold">Storage and Data > Proxy</span>.</p>
-		<h2>Step 4</h2>
-		<p>Tap <span class="bold">Use Proxy</span>.</p>
-		<h2>Step 5</h2>
+		<h2>{$_('STEP_1')}</h2>
+		<p>{$_('MAKE_SURE_YOU_USE_LATEST_VERSION')}</p>
+		<h2>{$_('STEP_2')}</h2>
+		<p>{$_('GO_TO_WHATSAPP_SETTINGS')} <span class="bold">{$_('SETTINGS')}</span>.</p>
+		<h2>{$_('STEP_3')}</h2>
+		<p>{$_('TAP')} <span class="bold">{$_('STORAGE_AND_DATA')}</span>.</p>
+		<h2>{$_('STEP_4')}</h2>
+		<p>{$_('TAP')} <span class="bold">{$_('USE_PROXY')}</span>.</p>
+		<h2>{$_('STEP_5')}</h2>
 		<p>
-			Enter the <span class="bold">proxy address and port</span>. (You can find proxies at our
-			<a href={HomeRoute + '/#proxyTable'}>home page</a> )
+			{$_('ENTER_THE')} <span class="bold">{$_('PROXY_ADDRESS_AND_PORT')}</span>. ({$_(
+				'YOU_CAN_FIND_PROXIES_AT'
+			)}
+			<a href={HomeRoute + '/#proxyTable'}>{$_('HOME_PAGE')}</a> )
 		</p>
-		<h2>Step 6</h2>
-		<p>Tap <span class="bold">Save</span>.</p>
-		<h2>Step 7</h2>
+		<h2>{$_('STEP_6')}</h2>
+		<p>{$_('TAP')} <span class="bold">{$_('SAVE')}</span>.</p>
+		<h2>{$_('STEP_7')}</h2>
 		<p>
-			A <span class="bold">check mark</span> will show if the connection is
-			<span class="bold">successful</span>.
+			{$_('A')} <span class="bold">{$_('CHECK_MARK')}</span>
+			{$_('WILL_SHOW_IF_THE_CONNECTION')}
+			<span class="bold">{$_('SUCCESSFUL')}</span>.
 		</p>
-		<h2>Step 8</h2>
+		<h2>{$_('STEP_8')}</h2>
 		<p>
-			If you are still unable to send or receive WhatsApp messages using a proxy, that proxy may
-			have been blocked. Try again using a different proxy address.
+			{$_('UNABLE_TO_RECEIVE')}
 		</p>
 	</div>
 </div>

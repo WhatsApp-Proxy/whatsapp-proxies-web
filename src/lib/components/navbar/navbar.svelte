@@ -1,6 +1,10 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
 	import { HomeRoute, MirrorRoute, HowToConnectRoute } from '$lib/const/routes';
+	import { setupLocale } from '$lib/locale/i18';
+	import { _ } from 'svelte-i18n';
+
+	setupLocale();
 
 	function routeTo(route: string) {
 		goto(route);
@@ -10,11 +14,14 @@
 
 <div class="navbarContent">
 	<div class="routeButtons">
-		<button on:click={() => routeTo(HomeRoute)} class="routeButton defaultFont">Home</button>
-		<button on:click={() => routeTo(HowToConnectRoute)} class="routeButton defaultFont"
-			>How to connect</button
+		<button on:click={() => routeTo(HomeRoute)} class="routeButton defaultFont">{$_('HOME')}</button
 		>
-		<button on:click={() => routeTo(MirrorRoute)} class="routeButton defaultFont">Mirrors</button>
+		<button on:click={() => routeTo(HowToConnectRoute)} class="routeButton defaultFont"
+			>{$_('HOW_TO_CONNECT')}</button
+		>
+		<button on:click={() => routeTo(MirrorRoute)} class="routeButton defaultFont"
+			>{$_('MIRRORS')}</button
+		>
 	</div>
 </div>
 

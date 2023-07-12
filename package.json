@@ -39,6 +39,7 @@
 		"@lottiefiles/svelte-lottie-player": "^0.3.0",
 		"@sveltejs/adapter-cloudflare": "^2.3.0",
 		"@types/object-hash": "^3.0.2",
-		"object-hash": "^3.0.0"
+		"object-hash": "^3.0.0",
+		"svelte-i18n": "^3.6.0"
 	}
 }
