@@ -11,7 +11,7 @@
 		return;
 	}
 
-	function englishLanguage(){
+	function englishLanguage() {
 		setLocale('en');
 	}
 </script>
@@ -27,13 +27,12 @@
 			>{$_('MIRRORS')}</button
 		>
 	</div>
-	<div class="rightContent">
+	<!-- <div class="rightContent">
 		<button on:click={() => englishLanguage()} class="emojiFont languageSwitcher routeButton">🇬🇧</button>
-		</div>
+		</div> -->
 </div>
 
 <style>
-	
 	.navbarContent {
 		display: flex;
 		flex-direction: row;

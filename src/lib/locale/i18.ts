@@ -10,14 +10,14 @@ export function setupLocale() {
 
 	addMessages('en', en);
 	addMessages('nl', nl);
-    addMessages('fa', fa);
+	addMessages('fa', fa);
 
 	init({
 		fallbackLocale: 'en',
-		initialLocale: getLocaleFromNavigator()
+		initialLocale: 'en' //getLocaleFromNavigator()
 	});
 }
 
-export function setLocale(newLocale = "en"){
-    locale.set(newLocale);
+export function setLocale(newLocale = 'en') {
+	locale.set(newLocale);
 }
