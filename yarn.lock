@@ -517,10 +517,10 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-18.11.18.tgz#8dfb97f0da23c2293e554c5a50d61ef134d7697f"
   integrity sha512-DHQpWGjyQKSHj3ebjFI/wRKcqQcdR+MoFBygntYOZytCqNfkd2ZC4ARDJ2DQqhjH5p85Nnd3jhUJIXrszFX/JA==
 
-"@types/object-hash@^3.0.2":
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/@types/object-hash/-/object-hash-3.0.2.tgz#f3656433e6c6049571fc3fb3fb42f389af96c0eb"
-  integrity sha512-tfyXl1JPCf2hzIDK29gO7qGqJjThKBzg/Cn3bA68R9NmWdOx+f7k5mm4to/n43BHspCwcoUC6FU4NpUoK/h9bQ==
+"@types/object-hash@^3.0.5":
+  version "3.0.5"
+  resolved "https://registry.yarnpkg.com/@types/object-hash/-/object-hash-3.0.5.tgz#f028398f9d918a4dcb57c50d16fc15023db6b244"
+  integrity sha512-WFGeSazfL5BWbEh5ACaAIs5RT6sbVIwBs1rgHUp+kZzX/gub41LEEYWTWbYnE/sKb7hDdPEsGa1Vmcaay2fS5g==
 
 "@types/pako@^1.0.1":
   version "1.0.4"
