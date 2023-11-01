@@ -40,6 +40,6 @@
 		"@sveltejs/adapter-cloudflare": "^2.3.3",
 		"@types/object-hash": "^3.0.5",
 		"object-hash": "^3.0.0",
-		"svelte-i18n": "^3.6.0"
+		"svelte-i18n": "^4.0.0"
 	}
 }
