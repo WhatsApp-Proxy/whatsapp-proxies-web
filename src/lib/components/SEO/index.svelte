@@ -1,8 +1,7 @@
 <script lang="ts">
 	import website from '$lib/config/website';
 
-	const { author, ogLanguage, siteLanguage, siteShortTitle, siteTitle, siteUrl, githubPage } =
-		website;
+	const { siteTitle, siteUrl } = website;
 
 	export let metadescription: string;
 	export let slug;

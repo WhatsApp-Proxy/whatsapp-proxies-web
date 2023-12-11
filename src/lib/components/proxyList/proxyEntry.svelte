@@ -7,6 +7,8 @@
 	export let proxyEntry: ProxyServerApi;
 	import { setupLocale } from '$lib/locale/i18';
 	import { _ } from 'svelte-i18n';
+	import { toast } from '@zerodevx/svelte-toast';
+	import { showSuccessToast } from '$lib/util/toastHelper';
 
 	setupLocale();
 
@@ -51,13 +53,18 @@
 
 	function copyIpToClipBoard(): void {
 		navigator.clipboard.writeText(`${proxyEntry.ipAddress}:${proxyEntry.proxyPort}`);
+		showSuccessToast($_('COPIED_PROXY_IP_TO_CLIPBOARD'));
 	}
 </script>
 
 <tr>
 	<td>{proxyEntry.serverName}</td>
-	<td class="ipAddress" on:click={copyIpToClipBoard} on:keydown={copyIpToClipBoard}
-		>{proxyEntry.ipAddress}:{proxyEntry.proxyPort}</td
+	<td
+		class="ipAddress"
+		on:focus={copyIpToClipBoard}
+		on:touchmove={copyIpToClipBoard}
+		on:click={copyIpToClipBoard}
+		on:keydown={copyIpToClipBoard}>{proxyEntry.ipAddress}:{proxyEntry.proxyPort}</td
 	>
 	<td class="emojiFont">{getFlagEmoji(proxyEntry.country)}</td>
 	<!-- <td>{proxyEntry.uptime}</td> -->
