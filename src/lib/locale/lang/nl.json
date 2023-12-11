@@ -61,5 +61,6 @@
 	"CHECK_MARK": "vinkje",
 	"WILL_SHOW_IF_THE_CONNECTION": "wordt weergegeven als de verbinding",
 	"SUCCESSFUL": "succesvol is",
-	"UNABLE_TO_RECEIVE": "Als je nog steeds geen WhatsApp-berichten kunt verzenden of ontvangen via een proxy, is die proxy mogelijk geblokkeerd. Probeer het opnieuw met een ander proxyadres."
+	"UNABLE_TO_RECEIVE": "Als je nog steeds geen WhatsApp-berichten kunt verzenden of ontvangen via een proxy, is die proxy mogelijk geblokkeerd. Probeer het opnieuw met een ander proxyadres.",
+	"COPIED_PROXY_IP_TO_CLIPBOARD": "Proxy-IP naar klembord gekopieerd"
 }

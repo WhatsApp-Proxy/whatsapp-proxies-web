@@ -61,5 +61,6 @@
 	"CHECK_MARK": "check mark",
 	"WILL_SHOW_IF_THE_CONNECTION": "will show if the connection is",
 	"SUCCESSFUL": "successful",
-	"UNABLE_TO_RECEIVE": "If you are still unable to send or receive WhatsApp messages using a proxy, that proxy may have been blocked. Try again using a different proxy address."
+	"UNABLE_TO_RECEIVE": "If you are still unable to send or receive WhatsApp messages using a proxy, that proxy may have been blocked. Try again using a different proxy address.",
+	"COPIED_PROXY_IP_TO_CLIPBOARD": "Copied proxy IP to clipboard"
 }
