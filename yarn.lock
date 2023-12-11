@@ -788,6 +788,11 @@
     loupe "^2.3.6"
     pretty-format "^29.5.0"
 
+"@zerodevx/svelte-toast@^0.9.5":
+  version "0.9.5"
+  resolved "https://registry.yarnpkg.com/@zerodevx/svelte-toast/-/svelte-toast-0.9.5.tgz#d86704f68e2f44475f53e273dc26c3d367ffb99a"
+  integrity sha512-JLeB/oRdJfT+dz9A5bgd3Z7TuQnBQbeUtXrGIrNWMGqWbabpepBF2KxtWVhL2qtxpRqhae2f6NAOzH7xs4jUSw==
+
 acorn-jsx@^5.3.2:
   version "5.3.2"
   resolved "https://registry.yarnpkg.com/acorn-jsx/-/acorn-jsx-5.3.2.tgz#7ed5bb55908b3b2f1bc55c6af1653bada7f07937"
