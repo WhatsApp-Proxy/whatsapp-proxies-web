@@ -37,7 +37,7 @@
 	<div class="listWithMirrors">
 		<ul>
 			{#each MirrorSiteList as mirror}
-				<li class="mirrorItem"><a href={mirror}>{mirror}</a></li>
+				<li class="mirrorItem"><a href={`https://${mirror}`}>{`https://${mirror}`}</a></li>
 			{/each}
 		</ul>
 	</div>
