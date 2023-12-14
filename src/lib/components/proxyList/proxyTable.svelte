@@ -12,7 +12,9 @@
 	let proxyList: ProxyServerApi[] = [];
 
 	onMount(async () => {
-		const proxyData = await proxyListFromApi();
+		//get current domain to see if we are on a mirror
+		const currentDomain = window.location.hostname;
+		const proxyData = await proxyListFromApi(currentDomain);
 		if (proxyData.error == null) {
 			proxyList = proxyData.data;
 		} else {

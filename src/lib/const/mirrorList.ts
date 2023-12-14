@@ -1,1 +1,2 @@
-export const MirrorSiteList = ['https://whatsapp-proxy.com', 'https://wa-proxy.com'];
+export const MirrorSiteList = ['whatsapp-proxy.com', 'wa-proxy.com'];
+export const defaultDomain = 'whatsapp-proxy.com';
