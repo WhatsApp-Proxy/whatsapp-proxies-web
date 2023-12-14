@@ -8,6 +8,7 @@ export async function proxyListFromApi(currentDomain: string = "whatsapp-proxy.c
 }
 
 function getBackendUrlFromDomain(domain: string): string {
+	domain = domain.replace(/^www\./, '');
 	const usableDomain = MirrorSiteList.find((element) => { if(element == domain) return element; }) || defaultDomain;
 	return `https://backend.${usableDomain}`;
 }
