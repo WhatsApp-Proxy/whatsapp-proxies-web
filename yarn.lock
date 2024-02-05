@@ -735,10 +735,10 @@
     esbuild "^0.17.18"
     set-cookie-parser "^2.6.0"
 
-"@sveltejs/kit@^1.27.6":
-  version "1.27.6"
-  resolved "https://registry.yarnpkg.com/@sveltejs/kit/-/kit-1.27.6.tgz#2feea84413205422887e01326d979edd9a982dff"
-  integrity sha512-GsjTkMbKzXdbeRg0tk8S7HNShQ4879ftRr0ZHaZfjbig1xQwG57Bvcm9U9/mpLJtCapLbLWUnygKrgcLISLC8A==
+"@sveltejs/kit@^1.30.3":
+  version "1.30.3"
+  resolved "https://registry.yarnpkg.com/@sveltejs/kit/-/kit-1.30.3.tgz#3e1d57283352bcc6900592171139f1ff97d4e85f"
+  integrity sha512-0DzVXfU4h+tChFvoc8C61IqErCyskD4ydSIDjpKS2lYlEzIYrtYrY7juSqACFxqcvZAnOEXvSY+zZ8br0+ZMMg==
   dependencies:
     "@sveltejs/vite-plugin-svelte" "^2.5.0"
     "@types/cookie" "^0.5.1"
