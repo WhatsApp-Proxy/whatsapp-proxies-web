@@ -495,10 +495,10 @@
     pako "^2.0.4"
     resize-observer-polyfill "^1.5.1"
 
-"@lottiefiles/svelte-lottie-player@^0.3.0":
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/@lottiefiles/svelte-lottie-player/-/svelte-lottie-player-0.3.0.tgz#05fab9c2ac09144c877cdea7e3cfa06cd1b2c8e7"
-  integrity sha512-u7kwq6YlNYCN7pRO3er+1/uDDwBX12c8hnKFxmRejAW78d3Ps6Hdq9XDUYHNAr+0euEf9p2RvpDmZaKQzcJXVw==
+"@lottiefiles/svelte-lottie-player@^0.3.1":
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/@lottiefiles/svelte-lottie-player/-/svelte-lottie-player-0.3.1.tgz#6883157ecbe876a38a39d392fb8f60b7d688c686"
+  integrity sha512-WnJasuRJJiKl1nSaZeYpaorNCdVOeR9FcWve/QLliPGxF6UUkS88uGH0Vd4ExP8PSpkagyQ7QYRBGCymBIxVxQ==
   dependencies:
     lottie-web "^5.10.0"
 
