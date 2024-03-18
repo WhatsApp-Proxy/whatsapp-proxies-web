@@ -36,7 +36,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@lottiefiles/lottie-player": "^2.0.3",
+		"@lottiefiles/lottie-player": "^2.0.4",
 		"@lottiefiles/svelte-lottie-player": "^0.3.1",
 		"@sveltejs/adapter-cloudflare": "^2.3.4",
 		"@types/object-hash": "^3.0.6",
