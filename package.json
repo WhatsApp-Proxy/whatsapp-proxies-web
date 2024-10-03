@@ -21,7 +21,7 @@
 		"@sveltejs/kit": "^1.30.4",
 		"@typescript-eslint/eslint-plugin": "^5.62.0",
 		"@typescript-eslint/parser": "^5.62.0",
-		"@zerodevx/svelte-toast": "^0.9.5",
+		"@zerodevx/svelte-toast": "^0.9.6",
 		"eslint": "^8.57.0",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-svelte3": "^4.0.0",
