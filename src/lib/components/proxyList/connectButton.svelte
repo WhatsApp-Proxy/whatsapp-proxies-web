@@ -1,15 +1,15 @@
 <script lang="ts">
-	import type { ProxyType } from '$lib/typeDef/proxyType';
-	export let proxyEntry: ProxyType;
+	import type { ProxyServerApi } from '$lib/typeDef/proxyApiReponse';
+	export let proxyEntry: ProxyServerApi;
 
-	function connectToWhatsApp() {
-		const url = `https://wa.me/proxy?host=${proxyEntry.ip}&chatPort=${proxyEntry.port}&mediaPort=588&chatTLS=true`;
+	function connectToWhatsapp() {
+		const url = `https://wa.me/proxy?host=${proxyEntry.ipAddress}&chatPort=${proxyEntry.proxyPort}&mediaPort=588&chatTLS=true`;
 		window.location.href = url;
 	}
 </script>
 
 <div>
-	<button on:click={connectToWhatsApp}>Connect</button>
+	<button on:click={connectToWhatsapp}>Connect</button>
 </div>
 
 <style>
@@ -22,16 +22,15 @@
 		font-size: 1rem;
 		font-weight: 500;
 		cursor: pointer;
-		transition: transform 0.2s, box-shadow 0.2s;
+		box-shadow: 0 4px #999;
 	}
 
 	button:hover {
-		transform: translateY(-2px);
-		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+		background-color: #128C7E;
 	}
 
 	button:active {
+		box-shadow: 0 2px #666;
 		transform: translateY(2px);
-		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 	}
 </style>
