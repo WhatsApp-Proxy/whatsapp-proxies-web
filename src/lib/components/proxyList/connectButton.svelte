@@ -1,10 +1,15 @@
 <script lang="ts">
 	import type { ProxyType } from '$lib/typeDef/proxyType';
 	export let proxyEntry: ProxyType;
+
+	function connectToWhatsApp() {
+		const url = `https://wa.me/proxy?host=${proxyEntry.ip}&chatPort=${proxyEntry.port}&mediaPort=588&chatTLS=true`;
+		window.location.href = url;
+	}
 </script>
 
 <div>
-	<button>Connect</button>
+	<button on:click={connectToWhatsApp}>Connect</button>
 </div>
 
 <style>

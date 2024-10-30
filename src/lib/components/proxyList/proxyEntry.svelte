@@ -75,6 +75,7 @@
 	{:else}
 		<td>Pinging...</td>
 	{/if}
+	<td><ConnectButton {proxyEntry} /></td>
 </tr>
 
 <style>
