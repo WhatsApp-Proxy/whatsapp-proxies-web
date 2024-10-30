@@ -15,4 +15,5 @@ export interface ProxyServerApi {
 	createdAt: string;
 	updatedAt: string;
 	responseTime?: number;
+	lastChecked?: string;
 }
