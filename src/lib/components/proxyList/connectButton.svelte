@@ -22,5 +22,16 @@
 		font-size: 1rem;
 		font-weight: 500;
 		cursor: pointer;
+		transition: transform 0.2s, box-shadow 0.2s;
+	}
+
+	button:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	}
+
+	button:active {
+		transform: translateY(2px);
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 	}
 </style>
