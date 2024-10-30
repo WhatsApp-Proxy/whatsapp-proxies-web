@@ -15,7 +15,7 @@
 <style>
 	button {
 		background-color: #25D366;
-		color: #fff;
+		color: #000;
 		border: none;
 		border-radius: 5px;
 		padding: 0.5rem 1rem;
