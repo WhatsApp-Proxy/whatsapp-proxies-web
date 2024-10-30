@@ -14,7 +14,7 @@
 
 <style>
 	button {
-		background-color: #000;
+		background-color: #25D366;
 		color: #fff;
 		border: none;
 		border-radius: 5px;
